@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- Header -->
@@ -34,12 +35,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-in" data-aos-delay="200">
                 <h1>Hi, I'm <span class="highlight">Ssembatya Isaac</span></h1>
-                <h2>Software Engineer & Developer</h2>
-                <p>Turning complex problems into elegant solutions</p>
+                <h2 data-aos="fade-up" data-aos-delay="300">Software Engineer & Developer</h2>
+                <p data-aos="fade-up" data-aos-delay="400">Turning complex problems into elegant solutions</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#projects" class="btn primary-btn" data-aos="fade-up" data-aos-delay="600">View My Work</a>
                     <a href="Ssembatya Isaac CV.pdf" class="btn secondary-btn" target="_blank">Download CV</a>
                 </div>
                 <div class="social-links">
@@ -70,10 +71,10 @@ class SoftwareEngineer {
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-right" data-aos-delay="200">
                 <div class="about-text">
                     <p>I am a passionate Software Engineer with experience in developing and implementing innovative solutions for various industries. With a First Class Honors degree in Software Engineering from Makerere University, I combine technical expertise with a keen eye for detail to deliver high-quality software solutions.</p>
                     <p>My experience spans across financial technology, utility services, and government projects, where I've consistently delivered solutions that improve efficiency and user experience.</p>
@@ -98,11 +99,11 @@ class SoftwareEngineer {
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="experience" class="experience" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Software Engineering Consultant</h3>
@@ -111,7 +112,7 @@ class SoftwareEngineer {
                         <p>Currently developing a loans and savings module for the platform allowing quick access to savings and loans services to the company's bank agents across the country.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Software Engineer & Application Support Developer</h3>
@@ -127,7 +128,7 @@ class SoftwareEngineer {
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Application Developer - Team Lead</h3>
@@ -136,7 +137,7 @@ class SoftwareEngineer {
                         <p>Managed and led the development of a student management system using Laravel and PHP while interacting with stakeholders about requirements.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>IT Officer – Volunteer</h3>
@@ -150,7 +151,7 @@ class SoftwareEngineer {
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="project-filters">
@@ -159,7 +160,7 @@ class SoftwareEngineer {
                 <button class="filter-btn" data-filter="commercial">Commercial</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="government">
+                <div class="project-card" data-aos="zoom-in" data-category="government">
                     <div class="project-img">
                         <img src="images/projects/mowe.jpg" alt="Ministry of Water & Environment E-Billing System" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -173,7 +174,7 @@ class SoftwareEngineer {
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="commercial">
+                <div class="project-card" data-aos="zoom-in" data-category="commercial">
                     <div class="project-img">
                         <img src="images/projects/dstv.jpeg" 
                         alt="Ugandan Mobile Money Payments" style="width: 100%; height: 100%; object-fit: cover;">
@@ -188,7 +189,7 @@ class SoftwareEngineer {
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="commercial">
+                <div class="project-card" data-aos="zoom-in" data-category="commercial">
                     <div class="project-img">
                         <img src="images/projects/rent.jpeg"
                          alt="Ugandan Family Rent Collection Platform" style="width: 100%; height: 100%; object-fit: cover;">
@@ -203,7 +204,7 @@ class SoftwareEngineer {
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="commercial">
+                <div class="project-card" data-aos="zoom-in" data-category="commercial">
                     <div class="project-img">
                         <img src="images/projects/muk_parking.jpeg" 
                         alt="Makerere University Parking" style="width: 100%; height: 100%; object-fit: cover;">
@@ -223,42 +224,42 @@ class SoftwareEngineer {
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Frameworks & Technologies</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
                             <h4>.NET</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-laravel"></i></div>
                             <h4>Laravel</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-react"></i></div>
                             <h4>React</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-node-js"></i></div>
                             <h4>Node.js</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-github"></i></div>
                             <h4>Github</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-figma"></i></div>
                             <h4>Figma</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fab fa-flutter"></i></div>
                             <h4>Flutter</h4>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-aos="zoom-in-up">
                             <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
                             <h4>Flutterflow</h4>
                         </div>
@@ -269,10 +270,10 @@ class SoftwareEngineer {
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education">
+    <section id="education" class="education" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="education-card">
+            <div class="education-card" data-aos="flip-left">
                 <div class="education-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
@@ -287,7 +288,7 @@ class SoftwareEngineer {
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
@@ -328,7 +329,7 @@ class SoftwareEngineer {
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" data-aos="fade-up" data-aos-delay="200">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -365,6 +366,7 @@ class SoftwareEngineer {
             emailjs.init("YOUR_USER_ID");
         })();
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

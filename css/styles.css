@@ -10,7 +10,7 @@
     --border-radius: 0px; /* Square corners for retro feel */
     --box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8); /* Pixelated shadow */
     --transition: all 0.3s ease;
-    --pirate-gold: #ffd700; /* Gold for pirate treasure */
+    --pirate-gold: var(--primary-color); /* Accents now use primary retro orange */
     --wood-brown: #8b4513; /* Ship wood color */
 }
 
@@ -110,53 +110,52 @@ img {
 /* Buttons - Retro iMac Pirate Style */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 25px;
     border-radius: var(--border-radius);
-    font-weight: bold;
-    cursor: pointer;
-    transition: var(--transition);
-    text-align: center;
-    border: 3px solid var(--dark-color);
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: var(--box-shadow);
-    position: relative;
-    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-inset);
     font-family: 'Courier New', monospace;
+    position: relative; /* For pseudo-elements if needed */
 }
 
-.primary-btn {
-    background-color: var(--primary-color);
-    color: white;
-    position: relative;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
 }
 
-.primary-btn::before {
+.btn.primary-btn {
+    background-color: var(--pirate-gold);
+    color: var(--dark-navy);
+    border-color: var(--pirate-gold);
+}
+
+.btn.primary-btn::before {
     content: '☠';
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
+    margin-right: 8px;
+    font-size: 1.1em;
 }
 
-.primary-btn:hover {
-    background: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: var(--box-shadow);
+.btn.primary-btn:hover {
+    background-color: var(--retro-orange);
+    color: var(--vintage-paper);
+    border-color: var(--retro-orange);
 }
 
-.secondary-btn {
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+.btn.secondary-btn {
+    background-color: transparent;
+    color: var(--pirate-gold);
+    border: 2px solid var(--pirate-gold);
 }
 
-.secondary-btn:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--box-shadow);
+.btn.secondary-btn:hover {
+    background-color: var(--pirate-gold);
+    color: var(--dark-navy);
 }
 
 .highlight {
@@ -216,23 +215,29 @@ nav {
     transition: var(--transition);
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: var(--primary-color);
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--pirate-gold);
 }
 
 .nav-links a::after {
-    content: '';
+    content: '⚓'; /* Anchor icon for underline */
     position: absolute;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    bottom: -5px;
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+    bottom: -5px; /* Position below the text */
     left: 0;
-    transition: var(--transition);
+    color: var(--pirate-gold);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hamburger {
@@ -515,15 +520,17 @@ nav {
 }
 
 .project-card {
-    background: white;
+    background-color: var(--vintage-paper);
+    border: 2px solid var(--wood-brown);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 10px 10px 0px var(--dark-navy); /* Pixelated shadow on hover */
 }
 
 .project-img {
@@ -601,22 +608,33 @@ nav {
 }
 
 .skill-item {
-    background: white;
-    border-radius: var(--border-radius);
+    background-color: var(--vintage-paper);
+    border: 2px solid var(--wood-brown);
     padding: 20px;
     text-align: center;
     box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px) scale(1.05) rotate(-1deg);
+    box-shadow: 8px 8px 0px var(--dark-navy); /* Pixelated shadow */
 }
 
-.skill-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+.skill-item:hover .skill-icon i {
+    color: var(--pirate-gold);
+    transform: rotate(360deg);
+}
+
+.skill-icon i {
+    font-size: 3rem;
+    color: var(--retro-orange);
     margin-bottom: 15px;
+    transition: color 0.3s ease, transform 0.5s ease; /* Added transform transition */
+}
+
+.skill-item:hover .skill-icon {
+    color: var(--accent-color);
 }
 
 .skill-item h4 {

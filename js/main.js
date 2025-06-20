@@ -193,34 +193,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animate elements on scroll
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-item, .education-card');
-    
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-        
-        if (elementPosition < screenPosition) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        once: true, // whether animation should happen only once - while scrolling down
     });
-};
-
-// Set initial styles for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-item, .education-card');
-    
-    elements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    // Run once on page load
-    animateOnScroll();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', animateOnScroll);
 });
